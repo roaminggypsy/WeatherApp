@@ -1,0 +1,43 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <string name="app_name">WeatherApp</string>
+    <string name="search_title">Search</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="current_location">Null</string>
+    <string name="current_temperature">Null</string>
+    <string name="current_summary">Null</string>
+    <string name="no_text"> </string>
+    <string name="icon">Icon</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="visibility">Visibility</string>
+    <string name="pressure">Pressure</string>
+    <string name="precipitation">Precipitation</string>
+    <string name="temperature">Temperature</string>
+    <string name="cloud_cover">Cloud Cover</string>
+    <string name="ozone">Ozone</string>
+    <string name="weeklySummary">Weekly Summary</string>
+    <string name="search_result">Search Result</string>
+
+    <string name="N_A">N/A</string>
+    <string name="search_hint">Search...</string>
+    <string name="lorem_ipsum">adasdfasd</string>
+    <string name="today">TODAY</string>
+    <string name="weekly">WEEKLY</string>
+    <string name="photos">PHOTOS</string>
+
+    <integer-array name="img_id_arr">
+        <item>@drawable/black</item>
+        <item>@drawable/black</item>
+        <item>@drawable/black</item>
+        <item>@drawable/black</item>
+    </integer-array>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="created_at">wwwwww</string>
+    <string name="image_download_url">https://picsum.photos/200/300/?random</string>
+    <string name="twitter_title">twitter</string>
+
+
+</resources>

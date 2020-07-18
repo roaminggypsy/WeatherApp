@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/windSpeedCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="#1d1d1d"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/pressureCard"
+        app:layout_constraintEnd_toStartOf="@+id/pressureCard"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/windSpeedIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/wind_speed" />
+
+        <TextView
+            android:id="@+id/windSpeedVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:text="@string/N_A"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/windSpeedLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="130dp"
+            android:text="@string/wind_speed" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pressureCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="#1d1d1d"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/precipitationCard"
+        app:layout_constraintEnd_toStartOf="@+id/precipitationCard"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/windSpeedCard"
+        app:layout_constraintTop_toTopOf="@+id/windSpeedCard">
+
+        <ImageView
+            android:id="@+id/pressureIcon"
+            android:layout_width="103dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/pressure" />
+
+        <TextView
+            android:id="@+id/pressureVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:text="@string/N_A"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/pressureLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="130dp"
+            android:text="@string/pressure" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/precipitationCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        app:cardBackgroundColor="#1d1d1d"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/windSpeedCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/pressureCard"
+        app:layout_constraintTop_toTopOf="@+id/windSpeedCard">
+
+        <ImageView
+            android:id="@+id/precipitationIcon"
+            android:layout_width="103dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/weather_pouring" />
+
+        <TextView
+            android:id="@+id/precipitationVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:text="@string/N_A"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/precipitationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="130dp"
+            android:text="@string/precipitation" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/temperatureCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="#1d1d1d"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/visibilityCard"
+        app:layout_constraintEnd_toStartOf="@id/summaryCard"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/windSpeedCard">
+
+        <ImageView
+            android:id="@+id/temperatureIcon"
+            android:layout_width="103dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/thermometer" />
+
+        <TextView
+            android:id="@+id/temperatureVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:text="@string/N_A"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/temperatureLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="130dp"
+            android:text="@string/temperature" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/summaryCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="#1d1d1d"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/temperatureCard"
+        app:layout_constraintEnd_toStartOf="@id/humidityCard"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/temperatureCard"
+        app:layout_constraintTop_toTopOf="@+id/temperatureCard">
+
+        <ImageView
+            android:id="@+id/summaryIcon"
+            android:layout_width="103dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/weather_sunny" />
+
+        <TextView
+            android:id="@+id/summaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="130dp"
+            android:text="@string/N_A"
+            android:textColor="@color/colorWhite" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/humidityCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:cardBackgroundColor="#1d1d1d"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/summaryCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/summaryCard"
+        app:layout_constraintTop_toBottomOf="@+id/precipitationCard">
+
+        <ImageView
+            android:id="@+id/humidityIcon"
+            android:layout_width="103dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/humidity" />
+
+        <TextView
+            android:id="@+id/humidityVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:text="@string/N_A"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/humidityLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="130dp"
+            android:text="@string/humidity" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/visibilityCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="#1d1d1d"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toStartOf="@id/cloudCoverCard"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureCard">
+
+        <ImageView
+            android:id="@+id/visibilityIcon"
+            android:layout_width="103dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/eye_outline" />
+
+        <TextView
+            android:id="@+id/visibilityVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:text="@string/N_A"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/visibilityLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="130dp"
+            android:text="@string/visibility" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cloudCoverCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="#1d1d1d"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toStartOf="@id/ozoneCard"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/visibilityCard"
+        app:layout_constraintTop_toBottomOf="@+id/summaryCard">
+
+        <ImageView
+            android:id="@+id/cloudCoverIcon"
+            android:layout_width="103dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/weather_fog" />
+
+        <TextView
+            android:id="@+id/cloudCoverVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:text="@string/N_A"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/cloudCoverLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="130dp"
+            android:text="@string/cloud_cover" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ozoneCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:cardBackgroundColor="#1d1d1d"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/cloudCoverCard"
+        app:layout_constraintTop_toBottomOf="@+id/humidityCard">
+
+        <ImageView
+            android:id="@+id/ozoneIcon"
+            android:layout_width="103dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/earth" />
+
+        <TextView
+            android:id="@+id/ozoneVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:text="@string/N_A"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/ozoneLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="130dp"
+            android:text="@string/ozone" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
