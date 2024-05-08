@@ -15,4 +15,4 @@ On clicking the current weather card with the info icon the detailed weather inf
 
 User can add a city to favorites by clicking on the floating action button at the bottom, this adds the city to the home screen with a dot indicator. The floating button acts as a switch to add and remove a city from favorites. Additionaly Webview is used to to allow the user to tweet about the weather in a city by clicking on the twitter icon in the detailed weather view menu.
 
-<img src=avorite.png width=260 hspace=20><img src=twitter.png width=260 hspace=20>
+<img src=favorite.png width=260 hspace=20><img src=twitter.png width=260 hspace=20>
